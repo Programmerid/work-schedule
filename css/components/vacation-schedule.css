@@ -166,7 +166,9 @@
           top: auto; }
         .vacation-schedule .vacation-schedule__data-table .vacation-schedule__list .vacation-schedule__item .vacation-schedule__month .vacation-schedule__month-items .vacation-schedule__week.absent-week::before {
           background-color: #FCC659; }
-        .vacation-schedule .vacation-schedule__data-table .vacation-schedule__list .vacation-schedule__item .vacation-schedule__month .vacation-schedule__month-items .vacation-schedule__week.vacation-week::before {
-          background-color: #1EBEB4; }
+        .vacation-schedule .vacation-schedule__data-table .vacation-schedule__list .vacation-schedule__item .vacation-schedule__month .vacation-schedule__month-items .vacation-schedule__week.vacation-week {
+          cursor: pointer; }
+          .vacation-schedule .vacation-schedule__data-table .vacation-schedule__list .vacation-schedule__item .vacation-schedule__month .vacation-schedule__month-items .vacation-schedule__week.vacation-week::before {
+            background-color: #1EBEB4; }
         .vacation-schedule .vacation-schedule__data-table .vacation-schedule__list .vacation-schedule__item .vacation-schedule__month .vacation-schedule__month-items .vacation-schedule__week.sick-week::before {
           background-color: #F16953; }

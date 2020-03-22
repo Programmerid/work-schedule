@@ -289,6 +289,8 @@
             }
 
             &.vacation-week {
+              cursor: pointer;
+              
               &::before {
                 background-color: $mint;
               }
