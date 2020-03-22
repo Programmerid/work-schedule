@@ -1,0 +1,168 @@
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "pages";
+@import "components";
+
+html,
+body {
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+body {
+  font-family: $main-font;
+  position: relative;
+  padding-bottom: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  display: block;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a, p, span, h1, h2, h3, h4 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.h2 {
+  color: $black;
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}
+.h5 {
+  color: $light-black;
+  font-size: 18px;
+}
+
+p {
+  color: $medium-black;
+  line-height: 12px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------------------------
+ Global Classes
+--------------------------- */
+
+.ms-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $container-max-width-xl;
+
+  @include max-w($xl) {
+    max-width: $container-max-width-lg;
+  }
+
+  @include max-w($lg) {
+    max-width: $container-max-width-md;
+  }
+
+  @include max-w($md) {
+    max-width: $container-max-width-xs;
+  }
+
+  @include max-w($xs) {
+    max-width: calc(100% - 50px);
+  }
+}
+
+.container {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 938px;
+}
+
+.row {
+  width: 100%;
+}
+
+/* ---------------------------
+ Global Elements
+--------------------------- */
+
+/* === Buttons === */ 
+.btn {
+  background-color: $white;
+  border: 2px solid $white;
+  border-radius: 2px;
+  color: $dark-blue;
+  padding: 16px 36px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $dark-blue;
+    border: 2px solid $dark-blue;
+    color: $white;
+  }
+
+  &.btn-active {
+    background-color: $dark-blue;
+    border: 2px solid $dark-blue;
+    color: $grey;
+
+    &:hover {
+      background-color: $grey;
+      border: 2px solid $grey;
+      color: $dark-blue;
+    }
+  }
+}
+
+/* === Pagination === */ 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .pagination__arrow-left,
+  .pagination__arrow-right {
+    a {
+      background: url(../images/icons/ic-left.svg) no-repeat center center;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .pagination__arrow-right {
+    a {
+      transform: rotate(180deg);
+    }
+  }
+
+  .pagination__ivents-list {
+    margin: 0 8px;
+
+    .pagination__ivent-item {
+      span {
+        color: $medium-black;
+        font-size: 18px;
+        cursor: default;
+        text-align: center;
+      }
+    }
+  }
+}

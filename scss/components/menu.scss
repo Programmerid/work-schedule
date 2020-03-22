@@ -1,0 +1,27 @@
+@import "../variables";
+@import "../mixins";
+
+.menu {
+  background-color: $light-grey;
+  padding: 6px 16px;
+  margin: 0 0 22px 0;
+  width: 100%;
+
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    .menu__item {
+      margin: 0 20px 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+
+      
+    }
+  }
+}

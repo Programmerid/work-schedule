@@ -1,0 +1,17 @@
+.right-sidebar {
+  background-color: $light-grey;
+  height: 100%;
+  width: 100%;
+  max-width: 290px;
+  position: relative;
+
+  &::after {
+    background-color: $light-grey;
+    content: '';
+    position: absolute;
+    right: -1000%;
+    top: 0;
+    height: 100%;
+    width: 1000%;
+  }
+}

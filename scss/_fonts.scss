@@ -1,0 +1,15 @@
+@import "variables";
+
+a,
+p,
+span {
+  font-family: $main-font;
+}
+
+@font-face {
+  font-family: "OpenSans Regular";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}

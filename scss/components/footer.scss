@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../mixins";
+
+header {
+  background-color: $light-grey;
+  display: block;
+  height: 461px;
+  width: 100%;
+}

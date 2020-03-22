@@ -1,0 +1,309 @@
+@import "../variables";
+@import "../mixins";
+
+.vacation-schedule {
+
+  @include max-w($xl) {
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+    .vacation-schedule__header {
+      background-color: $light-grey;
+      padding: 17px 20px;
+
+      @include max-w($xl) {
+        width: 840px;
+      }
+
+      .vacation-schedule__header-wrapper{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 0 0 21px 0;
+      width: 100%;
+
+      .vacation-schedule__title {
+        text-align: left;
+      }
+    }
+  
+  }
+
+  .vacation-schedule__list-titles{
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        width: 6.9%;
+
+        &:first-child {
+          width: 10%;
+        }
+
+        p {
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .vacation-schedule__data-table {
+
+    @include max-w($xl) {
+      width: 840px;
+    }
+
+    .vacation-schedule__list {
+      margin: 4px 0;
+
+      .vacation-schedule__item {
+        border-bottom: 1px solid $light-grey;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 4px 20px;
+
+        > div {
+          width: 6.9%;
+
+          &:first-child {
+            position: relative;
+            left: -20px;
+            width: 10%;
+          }
+          &:last-child {
+            position: relative;
+          }
+        }
+
+       .vacation-schedule__person {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+         .vacation-schedule__person-image {
+           margin: 0 8px 0 0;
+           height: 100%;
+           max-height: 32px;
+           width: 100%;
+           max-width: 32px;
+         }
+         .vacation-schedule__person-name {
+           display: block;
+           text-align: left;
+
+           p {
+            font-size: 12px;
+            line-height: 12px;
+            margin: 0 0 1px 0;
+
+            &:last-child {
+              margin: 0;
+            }
+           }
+         }
+       }
+       .vacation-schedule__days {
+         p {
+          color: $medium-black;
+          font-size: 12px;
+          text-align: center;
+         }
+       }
+       .vacation-schedule__month {
+        .vacation-schedule__month-items {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          .vacation-schedule__week {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            margin: 0 2px 0 0;
+            height: 16px;
+            width: 8px;
+
+            &::before {
+              content: '';
+              background-color: $light-grey;
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 100%;
+            }
+
+            &::after {
+              display: none;
+              content: '';
+              background-color: $mint;
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 100%;
+            }
+
+            &.done-week {
+              &:before {
+                background-color: $light-grey;
+              }
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+
+            &.work-week {
+              &::before {
+                background-color: $light-green;
+              }
+            }
+
+            // === Extra Top Position ===
+            &.one-top-extra {
+              &::after {
+                display: block;
+                height: 14.2%;
+              }                
+            }
+            &.two-top-extra {
+              &::after {
+                display: block;
+                height: 28.4%;
+              }                
+            }
+            &.three-top-extra {
+              &::after {
+                display: block;
+                height: 42.6%;
+              }                
+            }
+            &.four-top-extra {
+              &::after {
+                display: block;
+                height: 56.8%;
+              }                
+            }
+            &.five-top-extra {
+              &::after {
+                display: block;
+                height: 71%;
+              }                
+            }
+            &.six-top-extra {
+              &::after {
+                display: block;
+                height: 85.2%;
+              }                
+            }
+
+            // === Top Position ===
+            &.one-top {
+              &::before {
+                height: 14.2%;
+              }                
+            }
+            &.two-top {
+              &::before {
+                height: 28.4%;
+              }                
+            }
+            &.three-top {
+              &::before {
+                height: 42.6%;
+              }                
+            }
+            &.four-top {
+              &::before {
+                height: 56.8%;
+              }                
+            }
+            &.five-top {
+              &::before {
+                height: 71%;
+              }                
+            }
+            &.six-top {
+              &::before {
+                height: 85.2%;
+              }                
+            }
+
+            // === Bottom Position ===
+            &.one-bottom {
+              &::before {
+                height:  14.2%;
+                bottom: 0;
+                top: auto;
+              }            
+            }
+            &.two-bottom {
+              &::before {
+                height:  28.4%;
+                bottom: 0;
+                top: auto;
+              }            
+            }
+            &.three-bottom {
+              &::before {
+                height: 42.6%;
+                bottom: 0;
+                top: auto;
+              }            
+            }
+            &.four-bottom {
+              &::before {
+                height: 56.8%;
+                bottom: 0;
+                top: auto;
+              }            
+            }
+            &.five-bottom {
+              &::before {
+                height: 71%;
+                bottom: 0;
+                top: auto;
+              }            
+            }
+            &.six-bottom {
+              &::before {
+                height: 85.2%;
+                bottom: 0;
+                top: auto;
+              }            
+            }
+
+            &.absent-week {
+              &::before {
+                background-color: $yellow;
+              }
+            }
+
+            &.vacation-week {
+              &::before {
+                background-color: $mint;
+              }
+            }
+
+            &.sick-week {
+              &::before {
+                background-color: $red;
+              } 
+            }
+
+          }
+        }
+       }
+      }
+    }
+  }
+}
